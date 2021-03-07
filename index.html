@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" 
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" 
+    crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Biolab task</title>
+</head>
+<body>
+    <section class="header">
+        <div class="header-item">
+            <span>Transaction / <a href="#">New Transaction</a></span>
+        </div>
+        <div class="header-item">
+            <span><i class="fas fa-plus-circle"></i></span><span><i class="fas fa-search"></i></span>
+        </div>
+    </section>
+    <section class="transaction-grid">
+        <div class="grid-item">
+            <div class="form-container">
+                <form action="#" method="post">
+                    <div class="part-input">
+                        <div class="field">
+                            <div class="field-title">
+                                Primary Name 
+                            </div>
+                            <div class="field-input">
+                                <input type="text" class="readonly" readonly data-ref='p_f_name'>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="field-title">
+                                Secondary Name 
+                            </div>
+                            <div class="field-input">
+                                <input type="text" class="readonly" readonly data-ref='p_s_name'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part-input">
+                        <div class="field">
+                            <div class="field-title">
+                                Age
+                            </div>
+                            <div class="field-input">
+                                <input type="text"  class="readonly" readonly data-ref='p_age'>
+                            </div>
+                            
+                        </div>
+                        <div class="field">
+                            <div class="field-title">
+                                Gender
+                            </div>
+                            <div class="field-input">
+                                <input type="text" class="readonly" readonly data-ref='p_gender'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part-input">
+                        <div class="field">
+                            <div class="field-title">
+                                Patient Number 
+                            </div>
+                            <div class="field-input">
+                                <input type="text" id="patient-num" class="readonly" data-ref="p_p_num">
+                                <label for="patient-num"><i class="fas fa-search" id="search-patient-btn" data-error="no data found"></i></label>
+                            </div>
+                            <small id="error-area"></small>
+                        </div>
+                        <div class="field">
+                            <div class="field-title">
+                                Patient Mobile 
+                            </div>
+                            <div class="field-input" >
+                                <input type="text" id="patient-mob-num" class="readonly" data-ref="p_mob_num" data-error="no data found">
+                                <label for="patient-mob-num"><i class="fas fa-search" id="search-patient-mob-btn"></i></label>
+                            </div>
+                            <small id="error-area">km</small>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="form-container">
+                <form action="#" method="post">
+                    <div class="part-input">
+                        <div class="field">
+                            <div class="field-title">
+                                Request # 
+                            </div>
+                            <div class="field-input">
+                                <i class="fas fa-external-link-alt" style="background-color: #8e8e8e;"></i><input type="text"><i class="fas fa-plus-circle"></i>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="field-title">
+                                Transaction #
+                            </div>
+                            <div class="field-input">
+                                <i class="fas fa-external-link-alt" style="background-color: #8e8e8e;"></i><input type="text" placeholder="Transaction Number"><i class="fas fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <div class="pop-container" id="pop-up">
+        <div class="pop-up">
+            <header class="pop-header">
+                People with this Mobile Number:
+                <i class="fas fa-times-circle" id="close-pop"></i>
+            </header>
+            
+            <div class="pop-content">
+                <ul class="pop-list" id="pop-list">
+                    <li id='patient-record'>
+                        <p>Ahmed Hossam Mukahal Aahmed</p>
+                        <p>0.2569</p>
+                        <button class="select-patient-btn" id="select-btn">Select</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Script  -->
+    <script src="app.js"></script>
+</body>
+</html>
